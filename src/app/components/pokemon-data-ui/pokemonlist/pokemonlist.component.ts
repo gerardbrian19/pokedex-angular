@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map, switchMap } from 'rxjs';
-import { IPokemon, IPokemonDetails } from 'src/app/model/IPokemon';
+import { IPokemonDetails } from 'src/app/model/IPokemon';
 import { PokemonRepositoryService } from 'src/app/services/pokemon-repository.service';
 
 @Component({
@@ -17,14 +16,9 @@ export class PokemonlistComponent implements OnInit {
   }
 
   private fetchAllPokemon() {
-    this.pokemonRepo.getPokemon().subscribe((pokemonList) => {
-      pokemonList.forEach((p) => {
-        this.pokemonRepo
-          .getPokemonDetails(p.name)
-          .subscribe((pokemonDetail) => {
-            this.pokemonDetails.push(pokemonDetail);
-          });
-      });
+    this.pokemonRepo.getAllPokemonDetails().subscribe((pokemonDetails) => {
+      console.log(pokemonDetails);
+      this.pokemonDetails = pokemonDetails;
     });
   }
 }

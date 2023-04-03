@@ -1,4 +1,13 @@
-<div *ngFor="let item of pokemonDetails">
-  <div>{{ item.name }}</div>
-  <img src="{{ item.sprites.other['official-artwork'].front_default }}" />
+<div class="app-container">
+  <div class="pokemon-container">
+    <div class="all-container">
+      <div *ngFor="let item of pokemonDetails">
+        <p>{{ item.name }}</p>
+        <img
+          [src]="item.sprites.other['official-artwork'].front_default"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
 </div>

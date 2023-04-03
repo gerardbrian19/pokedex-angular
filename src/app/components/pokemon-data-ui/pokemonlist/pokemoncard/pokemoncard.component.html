@@ -1,3 +1,31 @@
-<p>
-  pokemoncard works!
-</p>
+<div class="container">
+  <div class="show">
+    <div class="stat-container-title">
+      <img [src]="image" [alt]="name" class="image-title" />
+      <p>No. {{ id }}</p>
+      <p>{{ name }}</p>
+      <img src="../../../../../assets/images/pokeball.png" [alt]="name" />
+    </div>
+    <img [src]="image" [alt]="name" class="image-title" />
+    <div class="stats-container">
+      <div class="stats-left">
+        <p>Type</p>
+        <p>Height</p>
+        <p>Weight</p>
+      </div>
+      <div class="stats-right">
+        <p>Type</p>
+        <p>{{ height }}</p>
+        <p>{{ weight }}</p>
+      </div>
+    </div>
+    <div class="base-stats">
+      <div class="div">gg</div>
+      <div class="div">gg</div>
+    </div>
+  </div>
+  <div class="right">
+    <img [src]="image" [alt]="name" class="image-title" />
+    <p></p>
+  </div>
+</div>

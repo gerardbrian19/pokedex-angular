@@ -5,8 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TopbarComponent } from './components/pokemon-ui/topbar/topbar.component';
 import { BottombarComponent } from './components/pokemon-ui/bottombar/bottombar.component';
-import { PokemoncardComponent } from './components/pokemon-data-ui/pokemonlist/pokemoncard/pokemoncard.component';
 import { PokemonlistComponent } from './components/pokemon-data-ui/pokemonlist/pokemonlist.component';
+import { PokemoncardComponent } from './components/pokemon-data-ui/pokemonlist/pokemoncard/pokemoncard.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import { PokemonlistComponent } from './components/pokemon-data-ui/pokemonlist/p
     TopbarComponent,
     BottombarComponent,
     PokemonlistComponent,
+    PokemoncardComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule],
   providers: [],
