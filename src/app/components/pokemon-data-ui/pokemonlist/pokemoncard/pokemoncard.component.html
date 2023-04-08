@@ -1,53 +1,39 @@
-<div class="container">
-  <div class="left-section">
-    <div class="top-detail">
-      <img [src]="image" [alt]="name" class="image-title" />
-      <p class="poke-no">No. {{ id }}</p>
-      <p class="poke-name">{{ name }}</p>
-      <img
-        class="white-pokeball"
-        src="../../../../../assets/images/pokeball.png"
-        [alt]="name"
-      />
+<div class="card">
+  <div class="top-detail">
+    <img [src]="image" [alt]="name" class="image-title" />
+    <p class="poke-no">No. {{ id }}</p>
+    <p class="poke-name">{{ name }}</p>
+    <img
+      class="white-pokeball"
+      src="../../../../../assets/images/pokeball.png"
+      [alt]="name"
+    />
+  </div>
+  <div class="poke-image">
+    <img [src]="image" [alt]="name" class="image-main" />
+  </div>
+  <div class="bottom-detail">
+    <div class="detail-left">
+      <p>Type</p>
+      <p>Height</p>
+      <p>Weight</p>
     </div>
-    <div class="poke-image">
-      <img [src]="image" [alt]="name" class="image-main" />
-    </div>
-    <div class="bottom-detail">
-      <div class="detail-left">
-        <p>Type</p>
-        <p>Height</p>
-        <p>Weight</p>
-      </div>
-      <div class="detail-right">
-        <p>Type</p>
-        <p>Height cm</p>
-        <p>Weight lbs</p>
-      </div>
-    </div>
-    <div class="bottom-stats">
-      <div class="stats-left">
-        <p>HP</p>
-        <p>Attack</p>
-        <p>Defense</p>
-      </div>
-      <div class="stats-right">
-        <p>HP</p>
-        <p>Attack</p>
-        <p>Defense</p>
-      </div>
+    <div class="detail-right">
+      <p>Type</p>
+      <p>Height cm</p>
+      <p>Weight lbs</p>
     </div>
   </div>
-  <div class="right-section">
-    <div class="poke-card">
-      <img [src]="image" [alt]="name" class="poke-image" />
-      <p class="pokecard-no">No. {{ id }}</p>
-      <p class="pokecard-name">{{ name }}</p>
-      <img
-        class="black-pokeball"
-        src="../../../../../assets/images/pokeball.png"
-        [alt]="name"
-      />
+  <div class="bottom-stats">
+    <div class="stats-left">
+      <p>HP</p>
+      <p>Attack</p>
+      <p>Defense</p>
+    </div>
+    <div class="stats-right">
+      <p>HP</p>
+      <p>Attack</p>
+      <p>Defense</p>
     </div>
   </div>
 </div>

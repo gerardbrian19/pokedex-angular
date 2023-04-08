@@ -10,7 +10,7 @@ export class PokemonRepositoryService {
   constructor(private http: HttpClient) {}
 
   public baseUrl: string = 'https://pokeapi.co/api/v2/pokemon';
-  public limit: number = 9;
+  public limit: number = 100;
   public offset: number = 0;
   public getPokemonUrl: string = `${this.baseUrl}?limit=${this.limit}&offset=${this.offset}`;
   public getPokemonDetailUrl = (pokemonName: string): string =>

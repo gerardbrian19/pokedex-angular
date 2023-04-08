@@ -1,14 +1,44 @@
 <div class="app-container">
   <div class="pokemon-container">
     <div class="all-container">
-      <app-pokemoncard
-        *ngFor="let pokemon of pokemonDetails"
-        [id]="pokemon.id"
-        [name]="pokemon.name"
-        [weight]="pokemon.weight"
-        [height]="pokemon.height"
-        [image]="pokemon.sprites.other['official-artwork'].front_default"
-      ></app-pokemoncard>
+      <div class="container">
+        <div class="left-section">
+          <app-pokemoncard
+            *ngIf="selectedId && selectedPokemon"
+            [id]="selectedPokemon.id"
+            [name]="selectedPokemon.name"
+            [weight]="selectedPokemon.weight"
+            [height]="selectedPokemon.height"
+            [image]="
+              selectedPokemon.sprites.other['official-artwork'].front_default
+            "
+          ></app-pokemoncard>
+        </div>
+        <div class="right-section">
+          <div
+            class="poke-card"
+            *ngFor="let pokemon of pokemonDetails"
+            (mouseenter)="onMouseEnter(pokemon.id)"
+            (mouseleave)="onMouseLeave()"
+          >
+            <img
+              [src]="pokemon.sprites.other['official-artwork'].front_default"
+              [alt]="pokemon.name"
+              class="poke-image"
+            />
+            <p class="pokecard-no">No. {{ pokemon.id }}</p>
+            <p class="pokecard-name">{{ pokemon.name }}</p>
+            <img
+              class="black-pokeball"
+              src="../../../../../assets/images/pokeball.png"
+              [alt]="pokemon.name"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<audio #audioOption>
+  <source src="../../../../assets/sounds/a-button-sound.mp3" type="audio/mp3" />
+</audio>

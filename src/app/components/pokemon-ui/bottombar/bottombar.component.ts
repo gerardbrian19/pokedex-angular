@@ -9,9 +9,9 @@ export class BottombarComponent implements OnInit {
   @ViewChild('audioOption') audioPlayerRef: ElementRef;
   constructor() {}
 
-  ngOnInit() {}
+  public ngOnInit(): void {}
 
-  onAudioPlay() {
+  public onAudioPlay(): void {
     this.audioPlayerRef.nativeElement.play();
   }
 }
