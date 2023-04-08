@@ -1,5 +1,14 @@
 <div class="app-container">
   <div class="pokemon-container">
-    <div class="all-container"></div>
+    <div class="all-container">
+      <app-pokemoncard
+        *ngFor="let pokemon of pokemonDetails"
+        [id]="pokemon.id"
+        [name]="pokemon.name"
+        [weight]="pokemon.weight"
+        [height]="pokemon.height"
+        [image]="pokemon.sprites.other['official-artwork'].front_default"
+      ></app-pokemoncard>
+    </div>
   </div>
 </div>

@@ -19,6 +19,7 @@ export class PokemonlistComponent implements OnInit {
   private fetchAllPokemon() {
     this.pokemonRepo.getAllPokemonDetails().subscribe((pokemonDetails) => {
       this.pokemonDetails = pokemonDetails;
+      console.log('this.pokemonDetails', this.pokemonDetails);
     });
   }
 

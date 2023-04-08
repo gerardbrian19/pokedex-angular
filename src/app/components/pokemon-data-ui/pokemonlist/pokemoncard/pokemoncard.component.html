@@ -1,31 +1,53 @@
 <div class="container">
-  <div class="show">
-    <div class="stat-container-title">
+  <div class="left-section">
+    <div class="top-detail">
       <img [src]="image" [alt]="name" class="image-title" />
-      <p>No. {{ id }}</p>
-      <p>{{ name }}</p>
-      <img src="../../../../../assets/images/pokeball.png" [alt]="name" />
+      <p class="poke-no">No. {{ id }}</p>
+      <p class="poke-name">{{ name }}</p>
+      <img
+        class="white-pokeball"
+        src="../../../../../assets/images/pokeball.png"
+        [alt]="name"
+      />
     </div>
-    <img [src]="image" [alt]="name" class="image-title" />
-    <div class="stats-container">
-      <div class="stats-left">
+    <div class="poke-image">
+      <img [src]="image" [alt]="name" class="image-main" />
+    </div>
+    <div class="bottom-detail">
+      <div class="detail-left">
         <p>Type</p>
         <p>Height</p>
         <p>Weight</p>
       </div>
-      <div class="stats-right">
+      <div class="detail-right">
         <p>Type</p>
-        <p>{{ height }}</p>
-        <p>{{ weight }}</p>
+        <p>Height cm</p>
+        <p>Weight lbs</p>
       </div>
     </div>
-    <div class="base-stats">
-      <div class="div">gg</div>
-      <div class="div">gg</div>
+    <div class="bottom-stats">
+      <div class="stats-left">
+        <p>HP</p>
+        <p>Attack</p>
+        <p>Defense</p>
+      </div>
+      <div class="stats-right">
+        <p>HP</p>
+        <p>Attack</p>
+        <p>Defense</p>
+      </div>
     </div>
   </div>
-  <div class="right">
-    <img [src]="image" [alt]="name" class="image-title" />
-    <p></p>
+  <div class="right-section">
+    <div class="poke-card">
+      <img [src]="image" [alt]="name" class="poke-image" />
+      <p class="pokecard-no">No. {{ id }}</p>
+      <p class="pokecard-name">{{ name }}</p>
+      <img
+        class="black-pokeball"
+        src="../../../../../assets/images/pokeball.png"
+        [alt]="name"
+      />
+    </div>
   </div>
 </div>
