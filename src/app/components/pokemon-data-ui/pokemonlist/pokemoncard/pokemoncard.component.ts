@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IStats } from 'src/app/model/IPokemon';
 
 @Component({
   selector: 'app-pokemoncard',
@@ -11,8 +12,8 @@ export class PokemoncardComponent implements OnInit {
   @Input() name: string;
   @Input() weight: number;
   @Input() height: number;
-  @Input() types: string[];
-  @Input() stats: string[];
+  @Input() type: string;
+  @Input() stats: IStats[];
 
   constructor() {}
 

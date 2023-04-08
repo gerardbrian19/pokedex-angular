@@ -34,7 +34,6 @@ export class PokemonlistComponent implements OnInit {
     this.selectedPokemon = this.pokemonDetails.find(
       (pd) => pd.id === pokemonId
     );
-    this.onAudioPlay();
     console.log('workds', pokemonId);
   }
 

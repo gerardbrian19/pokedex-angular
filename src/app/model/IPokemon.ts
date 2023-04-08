@@ -17,6 +17,7 @@ export interface IPokemonDetails {
   weight: number;
   sprites: ISprites;
   stats: IStats[];
+  types: ITypes[];
 }
 
 export interface ISprites {
@@ -30,6 +31,13 @@ export interface ISprites {
 export interface IStats {
   base_stat: number;
   stat: {
+    name: string;
+  };
+}
+
+export interface ITypes {
+  slot: number;
+  type: {
     name: string;
   };
 }

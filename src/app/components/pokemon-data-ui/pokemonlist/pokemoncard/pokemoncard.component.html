@@ -19,21 +19,17 @@
       <p>Weight</p>
     </div>
     <div class="detail-right">
-      <p>Type</p>
-      <p>Height cm</p>
-      <p>Weight lbs</p>
+      <p>{{ type }}</p>
+      <p>{{ height }} cm</p>
+      <p>{{ weight }} lbs</p>
     </div>
   </div>
   <div class="bottom-stats">
     <div class="stats-left">
-      <p>HP</p>
-      <p>Attack</p>
-      <p>Defense</p>
+      <p *ngFor="let item of stats">{{ item.stat.name }}</p>
     </div>
     <div class="stats-right">
-      <p>HP</p>
-      <p>Attack</p>
-      <p>Defense</p>
+      <p *ngFor="let item of stats">{{ item.base_stat }}</p>
     </div>
   </div>
 </div>

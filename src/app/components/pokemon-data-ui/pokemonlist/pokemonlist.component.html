@@ -12,6 +12,8 @@
             [image]="
               selectedPokemon.sprites.other['official-artwork'].front_default
             "
+            [type]="selectedPokemon.types[0].type.name"
+            [stats]="selectedPokemon.stats.slice(0, 3)"
           ></app-pokemoncard>
         </div>
         <div class="right-section">
